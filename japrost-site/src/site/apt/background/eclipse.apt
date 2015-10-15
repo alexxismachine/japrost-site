@@ -1,0 +1,49 @@
+ -----
+ JaProSt Eclipse
+ -----
+ alexxismachine
+ -----
+ 2009-11-22
+ -----
+
+Eclipse
+
+  Diese Seite beschreibt, welche Eclipse-Plugins und Einstellungen verwendet werden.
+  
+* Eclemma
+
+  PlugIn zur Ermittlung der Code-Coverage. 
+
+* More Unit
+
+  PlugIn zur besseren JUnit Unterstützung.
+  
+* Maven
+
+** Lokaler Entwickler Build
+
+  * Goals: clean deploy site:site site:stage
+  
+  * Die entsprechenden Properties für das deployment und das staging müssen in den settings gesetzt sein.
+  
++---
+    <profile>
+      <!-- A profile for local (development) work with JaProSt artifacts -->
+      <id>JaProStLocal</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <!-- distribution -->
+        <!-- site -->
+        <japrost.site.id>JaProStLocalSites</japrost.site.id>
+        <japrostSiteStageDirectory>/tmp/japrost/sites</japrostSiteStageDirectory>
+        <!-- releases -->
+        <japrost.distribution.releases.id>releases</japrost.distribution.releases.id>
+        <japrost.distribution.releases.url>file:///tmp/japrost/releases</japrost.distribution.releases.url>
+        <!-- snapshots -->
+        <japrost.distribution.snapshots.id>snapshots</japrost.distribution.snapshots.id>
+        <japrost.distribution.snapshots.url>file:///tmp/japrost/snapshots</japrost.distribution.snapshots.url>
+      </properties>
+    </profile>
++---

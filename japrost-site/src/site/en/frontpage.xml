@@ -1,0 +1,44 @@
+<frontpage
+	xmlns="http://frontpage.japrost.de/FRONTPAGE/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://frontpage.japrost.de/FRONTPAGE/1.0.0 http://www.japrost.de/maven/frontpage-report/xsd/frontpage-1.0.0.xsd">
+	<outputName>index</outputName>
+	<content>
+		<configuration>
+				<items>
+					<item>
+						<id>eins</id>
+						<filename>iindex.apt</filename>
+					</item>
+					<item>
+						<id>zwei</id>
+						<filename>news.apt</filename>
+					</item>
+					<item>
+						<id>drei</id>
+						<type>apt</type>
+						<content><![CDATA[
+  twitter
+  
+  {{{http://twitter.com/alexxismachine}Follow me on twitter}}
+			]]></content>
+					</item>
+					<item>
+						<id>vier</id>
+						<type>apt</type>
+						<content><![CDATA[
+  Frontpage Maven Report
+  
+  An example to present the TableLayout of the Frontpage Maven Report. I use 
+  <<<2-1[2]{.newscontent}:1-1>>> as fastSetup.		
+			]]></content>
+					</item>
+				</items>
+		</configuration>
+	</content>
+	<layout>
+		<configuration>
+			<fastSetup>2-1[2]{.newscontent}:1-1</fastSetup>
+		</configuration>
+	</layout>
+</frontpage>

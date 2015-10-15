@@ -1,0 +1,40 @@
+ -----
+ Startseite
+ -----
+ alexxismachine
+ -----
+ 2009-11-22
+ -----
+
+Java Programming Studio
+
+* JaProSt != Ja, Prost!
+
+	Um es von vornherein klar zu stellen, JaProSt ist die Kurzform von Java Programming Studio.
+	Es hat nichts, auch nicht im entferntesten, mit einem Trinkspruch zu tun!
+
+* JaProSt \<= DaProSt
+
+	Unter JaProSt zeige ich die Dinge, wie ich sie als DaProSt umsetze.
+	
+	* Software-Entwicklung in Java für Unternehmen: 
+	
+	Den vollen Java EE-Stack (JSF / EJB / JPA) oder auch 'schlank' mit Spring und Hibernate.
+	
+	* Agil mit Continous Integegration / Delivery:
+	
+	 Automatisierung von Build, Test und Installation mit maven und Jenkins. 
+	 
+	* und alles in nachvollziehbarer Qualität:
+	
+	Statische Analysen mit sonarqube, PMD und Checkstyle. 
+	
+* De Sign or not De Sign
+
+	Wie an dieser Site eindeutig zu sehen ist, mache ich <kein> Web-Design. 
+
+* DRAFT // SNAPSHOT
+
+	Dies ist alles (noch) nur ein Test! 
+
+	

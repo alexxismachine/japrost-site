@@ -1,0 +1,18 @@
+ -----
+ Über ...
+ -----
+ alexxismachine
+ -----
+ 2010-02-11
+ -----
+
+Java Programming Studio - Site
+
+  Diese Site ist die 'unabhängige' Basis der Web-Site von JaProSt.
+  Sie entkoppelt die Web-Site von den Build- und Release-Zyklen der parent-pom.
+  
+* JaProSt Maven Repository
+
+  Die JaProSt Artefakte sind unter {{{http://www.japrost.de/releases/}releases}} bzw. {{{http://www.japrost.de/snapshots/}snapshots}} zu
+  finden.
+   
