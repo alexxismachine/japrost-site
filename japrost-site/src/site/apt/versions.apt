@@ -12,10 +12,10 @@ Versions
   
     * site 2.0-SN
   
-  * parent 4
-  
     * skin 1-SN
     
+  * parent 4
+  
     * java-parent 1
     
       * amaot 2.0.0
