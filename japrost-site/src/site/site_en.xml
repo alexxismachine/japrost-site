@@ -1,80 +1,62 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <project
-	xmlns="http://maven.apache.org/DECORATION/1.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd"
-	name="JaProSt">
+  xmlns="http://maven.apache.org/DECORATION/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd"
+  name="JaProSt">
+  <body>
+    <breadcrumbs>
+      <item
+        name="JaProSt"
+        href="${japrost.project.url}/en/index.html" />
+    </breadcrumbs>
 
-	<version position="bottom" />
-	<publishDate position="right" />
+    <menu name="JaProSt">
+      <item
+        name="Overview"
+        href="index.html" />
+      <item
+        name="News"
+        href="news.html" />
+      <item
+        name="Parent"
+        href="../parent/en/index.html" />
+      <item
+        name="Skin"
+        href="../skin/en/index.html" />
+    </menu>
 
-	<bannerLeft>
-		<name>JaProSt</name>
-		<src>images/JaProSt-logo.gif</src>
-		<href>${japrostProjectUrl}</href>
-	</bannerLeft>
+    <menu name="Java">
+      <item
+        name="Parent"
+        href="../java/en/index.html" />
+      <item
+        name="Widelands Doc"
+        href="../java/widelands/en/index.html" />
+    </menu>
 
-	<body>
-		<links>
-			<item
-				name="Maven"
-				href="http://maven.apache.org/" />
-		</links>
-		<breadcrumbs>
-			<item
-				name="JaProSt"
-				href="../en/index.html" />
-		</breadcrumbs>
+    <menu name="Project Layout">
+      <item
+        name="Background"
+        collapse="true"
+        href="background/index.html">
+        <item
+          name="About JaProSt Parent"
+          href="background/about.html" />
+        <item
+          name="Eclipse"
+          href="background/eclipse.html" />
+      </item>
+        <item
+          name="Changes"
+          href="changes-report.html" />
+      <item
+        name="Imprint"
+        href="../imprint.html" />
+    </menu>
 
-		<menu name="JaProSt">
-			<item
-				name="Overview"
-				href="index.html" />
-			<item
-				name="News"
-				href="news.html" />
-			<item
-				name="Parent"
-				href="../parent/en/index.html" />
-			<item
-				name="Skin"
-				href="../skin/en/index.html" />
-		</menu>
-
-		<menu name="Java">
-			<item
-				name="Parent"
-				href="../java/en/index.html" />
-			<item
-				name="Widelands Doc"
-				href="../java/widelands/en/index.html" />
-		</menu>
-
-		<menu name="Project Layout">
-			<item
-				name="Background"
-				collapse="true"
-				href="background/index.html">
-				<item
-					name="About JaProSt Parent"
-					href="background/about.html" />
-				<item
-					name="Eclipse"
-					href="background/eclipse.html" />
-			</item>
-			<item
-				name="Imprint"
-				href="../imprint.html" />
-		</menu>
-
-		<menu
-			ref="reports"
-			inherit="bottom" />
-
-	</body>
-	<skin>
-		<groupId>de.japrost</groupId>
-		<artifactId>${japrost.site.skin.artifact}</artifactId>
-		<version>${japrost.site.skin.version}</version>
-	</skin>
+    <menu
+      ref="reports"
+      inherit="bottom" />
+  </body>
 </project>

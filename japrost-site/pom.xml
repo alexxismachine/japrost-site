@@ -1,98 +1,65 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>de.japrost</groupId>
-		<artifactId>japrost-parent</artifactId>
-		<version>4</version>
-	</parent>
+  <parent>
+    <groupId>de.japrost</groupId>
+    <artifactId>japrost-parent</artifactId>
+    <version>5-SNAPSHOT</version>
+  </parent>
 
-	<artifactId>japrost-site</artifactId>
-	<version>2.0-SNAPSHOT</version>
-	<packaging>pom</packaging>
+  <artifactId>japrost-site</artifactId>
+  <version>2.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
 
-	<name>JaProSt Site</name>
-	<description>Java Programming Studios Site</description>
-	<url>${japrostProjectUrl}</url>
+  <name>JaProSt Site</name>
+  <description>Java Programming Studios Site</description>
+  <url>${japrost.project.url}</url>
+  <!-- avoid tailing slash on empty ${japrost.project.url}. Default is:
+    <url>${japrost.project.url}/${japrost.site.project.path}/</url>
+  -->
 
-	<organization>
-		<name>JaProSt (Ulrich David)</name>
-		<url>${japrostOrganizationUrl}</url>
-	</organization>
-	<inceptionYear>2009</inceptionYear>
+  <properties>
+    <!-- START values to be overwritten in sub-projects -->
+    <japrost.site.project.path></japrost.site.project.path>
+  </properties>
 
-	<properties>
-		<japrost.site.path>/</japrost.site.path>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>de.japrost.maven</groupId>
+        <artifactId>japrost-frontpage-report</artifactId>
+        <version>2.0</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>2.8.1</version>
+        <configuration>
+          <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+        </configuration>
+        <reportSets>
+          <reportSet>
+            <id>site</id>
+            <reports>
+              <report>scm</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
+  </reporting>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>wagon-maven-plugin</artifactId>
-				<version>1.0</version>
-				<configuration>
-					<sourceId>JaProStDistributionInternal</sourceId>
-					<source>http://abba:18081/nexus/content/repositories/japrost_releases/de/japrost/japrost-site</source>
-					<targetId>JaProStDistributionPublic</targetId>
-					<target>sftp://ssh.strato.de/japrost/releases/de/japrost/japrost-site</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-	<reporting>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>${version.maven.project-info-reports}</version>
-				<configuration>
-					<dependencyLocationsEnabled>false</dependencyLocationsEnabled>
-				</configuration>
-				<reportSets>
-					<reportSet>
-						<reports>
-							<report>summary</report>
-						</reports>
-					</reportSet>
-				</reportSets>
-			</plugin>
-			<plugin>
-				<groupId>de.japrost.maven</groupId>
-				<artifactId>japrost-frontpage-report</artifactId>
-				<version>${version.japrost.frontpage.report}</version>
-				<inherited>false</inherited>
-			</plugin>
-		</plugins>
-	</reporting>
-	<!-- this is where all the stuff goes to -->
-	<distributionManagement>
-		<site>
-			<id>JaProStDistributionInternal</id>
-			<name>Site</name>
-			<!-- remote site is staged<url>sftp://ssh.strato.de/japrost/</url> -->
-			<url>file:/srv/sites/japrost/${japrost.site.path}</url>
-		</site>
-		<!-- use the following if you're not using a snapshot version. -->
-		<repository>
-			<id>${japrost.distribution.releases.id}</id>
-			<name>Releases</name>
-			<url>${japrost.distribution.releases.url}</url>
-		</repository>
-		<!-- use the following if you ARE using a snapshot version. -->
-		<snapshotRepository>
-			<id>${japrost.distribution.snapshots.id}</id>
-			<name>Snapshots</name>
-			<url>${japrost.distribution.snapshots.url}</url>
-		</snapshotRepository>
-	</distributionManagement>
-
-	<!-- this is where all the stuff comes from -->
-	<scm>
-		<connection>scm:hg:http://abba:18080/scm/hg/japrost/japrost-site</connection>
-		<developerConnection>scm:hg:http://abba:18080/scm/hg/japrost/japrost-site</developerConnection>
-	</scm>
-
+  <distributionManagement>
+    <site>
+      <id>${japrost.distribution.site.id}</id>
+      <name>JaProSt-Site</name>
+      <url>${japrost.distribution.site.url}</url>
+      <!-- avoid tailing slash on empty ${jplanets.site.project.path}. Default is:
+        <url>${japrost.distribution.site.url}/${japrost.site.project.path}/</url>
+      -->
+    </site>
+  </distributionManagement>
 </project>
