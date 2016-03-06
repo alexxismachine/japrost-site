@@ -14,6 +14,8 @@ Versions
   
     * skin 1-SN
     
+    * java-parent 2-SN
+    
   * parent 4
   
     * java-parent 1
@@ -37,7 +39,4 @@ Versions
       * widelands doc 0.5
     
       * widelands doc 0.5-SN
-    
-    * java-parent 2-SN
-    
-    
+        
