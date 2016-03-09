@@ -18,6 +18,8 @@ Versions
     
       * amaot 2.1.0-SN
     
+      * amaot one 1.1.0-SN
+      
   * parent 4
   
     * java-parent 1
@@ -26,8 +28,6 @@ Versions
 
       * amaot one 1.0.0
     
-      * amaot one 1.1.0-SN
-      
       * excerpt 0.0.1
       
       * excerpt 0.0.2-SN
