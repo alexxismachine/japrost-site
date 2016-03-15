@@ -26,6 +26,9 @@
         name="Skin"
         href="skin/index.html" />
       <item
+        name="QA"
+        href="japrost-qa/index.html" />
+      <item
         name="Versionen"
         href="versions.html" />
     </menu>
