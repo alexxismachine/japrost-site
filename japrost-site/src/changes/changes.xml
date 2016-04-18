@@ -7,6 +7,9 @@
       version="2.0"
       description="pom and reports">
       <action type="add">
+        Add JaBudget to java section.
+      </action>
+      <action type="add">
         Versions overview.
       </action>
       <action type="add">

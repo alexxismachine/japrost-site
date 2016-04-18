@@ -6,6 +6,8 @@ Java Projekte
 
   {{{./staproma/index.html}StaProMa}} Static Project Management - ein Tool, welches ein Task-Management auf Basis von 'einfachen' Textdateien erlaubt.
 
+  {{{./jabudget/index.html}JaBudget}} ist eine Anwendung, die es einem erlaubt, seine Finanzen (von einfach bis komplex) zu verwalten.
+
   {{{./amaot/index.html}AMAOT}} A Microchronometer Always On Top - ein einfacher Countdowntimer, der sich im Vordergrund einnistet.
   
   {{{./amaot-one/index.html}AMAOT one}}  AMAOT als eine Datei zum selber basteln.
