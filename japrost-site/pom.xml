@@ -7,7 +7,7 @@
   <parent>
     <groupId>de.japrost</groupId>
     <artifactId>japrost-parent</artifactId>
-    <version>5-SNAPSHOT</version>
+    <version>5.1-SNAPSHOT</version>
   </parent>
 
   <artifactId>japrost-site</artifactId>
@@ -26,12 +26,28 @@
     <japrost.site.project.path></japrost.site.project.path>
   </properties>
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>de.jplanets.maven</groupId>
+        <artifactId>jplanets-frontpage-report</artifactId>
+        <version>3.0</version>
+        <dependencies>
+          <dependency>
+            <groupId>org.apache.maven.doxia</groupId>
+            <artifactId>doxia-module-apt</artifactId>
+            <version>1.2</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+    </plugins>
+  </build>
   <reporting>
     <plugins>
       <plugin>
-        <groupId>de.japrost.maven</groupId>
-        <artifactId>japrost-frontpage-report</artifactId>
-        <version>2.0</version>
+        <groupId>de.jplanets.maven</groupId>
+        <artifactId>jplanets-frontpage-report</artifactId>
+        <version>3.0</version>
       </plugin>
     </plugins>
   </reporting>
