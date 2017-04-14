@@ -7,7 +7,7 @@
   <parent>
     <groupId>de.japrost</groupId>
     <artifactId>japrost-parent</artifactId>
-    <version>5.1-SNAPSHOT</version>
+    <version>5.2-SNAPSHOT</version>
   </parent>
 
   <artifactId>japrost-site</artifactId>
@@ -16,15 +16,7 @@
 
   <name>JaProSt Site</name>
   <description>Java Programming Studios Site</description>
-  <url>${japrost.project.url}</url>
-  <!-- avoid tailing slash on empty ${japrost.project.url}. Default is:
-    <url>${japrost.project.url}/${japrost.site.project.path}/</url>
-  -->
-
-  <properties>
-    <!-- START values to be overwritten in sub-projects -->
-    <japrost.site.project.path></japrost.site.project.path>
-  </properties>
+  <url>http://www.japrost.de</url>
 
   <build>
     <plugins>
@@ -54,12 +46,9 @@
 
   <distributionManagement>
     <site>
-      <id>${japrost.distribution.site.id}</id>
+      <id>japrostSiteId</id>
       <name>JaProSt-Site</name>
       <url>${japrost.distribution.site.url}</url>
-      <!-- avoid tailing slash on empty ${jplanets.site.project.path}. Default is:
-        <url>${japrost.distribution.site.url}/${japrost.site.project.path}/</url>
-      -->
     </site>
   </distributionManagement>
 </project>
