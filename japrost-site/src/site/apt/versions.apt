@@ -8,7 +8,9 @@
 
 Versions
 
-  * parent 5.2-SN
+  * parent 5.3-SN
+ 
+  * parent 5.2
  
     * site 2.0-SN
   
@@ -16,7 +18,9 @@ Versions
     
     * qa 1.0-SN
     
-    * java-parent 2.0-SN
+    * java-parent 2.1-SN
+    
+    * java-parent 2.0
     
       * amaot 2.1.0-SN
     
