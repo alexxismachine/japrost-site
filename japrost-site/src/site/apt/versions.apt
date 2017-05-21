@@ -10,39 +10,39 @@ Versions
 
   * parent 5.3-SN
  
-  * parent 5.2
+  * <<parent 5.2>>
  
-    * site 2.0-SN
+    * <<site 2.0>>
   
-    * skin 1-SN
+    * site 2.1-SN
+  
+    * <<skin 1>>
     
-    * qa 1.0-SN
+    * skin 2-SN
+    
+    * <<qa 1.0>>
+    
+    * qa 1.1-SN
     
     * java-parent 2.1-SN
     
-    * java-parent 2.0
+    * <<java-parent 2.0>>
     
-      * amaot 2.1.0-SN
+      * <<amaot 2.1.0>>
     
-      * amaot one 1.1.0-SN
+      * amaot 2.1.1-SN
+    
+      * <<amaot one 1.1.0>>
       
-      * excerpt 0.0.2-SN
+      * amaot one 1.1.1-SN
       
-      * StaProMa 0.0.4-SN
+      * <<excerpt 0.0.2>>
+      
+      * excerpt 0.0.3-SN
+      
+      * <<StaProMa 0.0.4>>
+      
+      * StaProMa 0.0.5-SN
       
       * widelands doc 0.6-SN
  
-  * parent 4
-  
-    * java-parent 1
-    
-      * amaot 2.0.0
-
-      * amaot one 1.0.0
-    
-      * excerpt 0.0.1
-      
-      * StaProMa 0.0.2
-    
-      * widelands doc 0.5
-    
