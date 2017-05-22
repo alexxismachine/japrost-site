@@ -1,0 +1,152 @@
+ -----
+ Build
+ -----
+ alexxismachine
+ -----
+ 2017-03-14
+ -----
+ 
+Build
+ 
+  Diese Seite beschreibt den Build und das Ausbringen der Artefakte. 
+
+* Build-Stages
+
+  Für den Build gibt es drei Stages: "local", "internal" und "public".
+  Sie sind in der parent-pom weitgehend vorkonfiguriert.
+  
+  "local" dient der Entwicklung und ist ohne spezielle Konfiguration in den settings nutzbar.
+  "local" hat als scm das geclonte Repository.
+  
+  "internal" dient dem Erstellen von Releases. 
+  Hier müssen ggfs. Server in den settings konfiguriert werden.
+  "internal" hat als scm einen internen clone des Repositories.
+  
+  "public" dient dem Veröffentlichen von Artefakten und der Site. 
+  Dazu müssen entsprechende settings konfiguriert werden.
+  "public" hat als scm das in der pom konfigurierte Repository.
+ 
+** Entwicklung "local"
+
+  Der Entwickler-Build ist für den einfachen Build durch Entwickler gedacht.
+  Alle Artefakte können in temporäre Verzeichnisse gebaut und deployed werden.
+  Dort können sie geprüft werden.
+  Es finden nur SNAPSHOT- und keine Release-Builds statt.
+  
+  Der Entwickler-Build hat das lokale git als scm und ist das Ziel von commits.
+  
+*** Erstellen der SNAPSHOT-Artefakte
+
+  Typischerweise werden bei der Entwicklung mit einem <clean install> die Artefakte lokal installiert.
+  Ein <deploy> obliegt der "public"-Stage.
+  
+*** Erstellen der SNAPSHOT-Site
+
+  Zum Testen der zusammenhängenden Site aller Projekte empfiehlt es sich,
+  diese an eine gemeinsame Stelle zu "stagen".
+  
+  Hierfür muss über z.B. <-DstagingDirectory=/tmp/japrost/site/> die gemeinsame Ausgabe gewählt werden 
+  und über <-DtopSiteURL=http://www.japrost.de/> das relativieren der Links einheitlich erstellt werden.
+  
+  Nicht zu vergessen, dass für die Site des Parent-Projekts über <-f site-pom.xml> die pom für die Site ausgewählt werden muss
+  und ein Erstellen der "zu vererbenden" Site nicht notwendig ist.
+  
+** Releases "internal"
+
+  Der interne Build ist für das Vorbereiten der Veröffenlichung bestimmt. 
+  In dieser Stage werden die Releases erstellt.
+  Die Site wird hier aktuell nicht gebaut / veröffentlicht.
+  
+*** Erstellen der Release-Artefakte
+
+  Releases werden zunächst nur intern ohne site und deploy durchgeführt: 
+  <mvn -DpushChanges=false -DlocalCheckout=true -Dgoals=install clean release:prepare release:perform>
+    
+  Das veröffentlichen der Artefakte wird auf dem durch das release-plugin erstellten TAG durchgeführt (s.u.).
+  Erst nach der Veröffentlichung werden die lokalen Änderungen durch das Release intern integriert.
+ 
+** Veröffentlichen "public"
+
+  Der öffentliche SNAPSHOT-Build ist zum Veröffenlichen der SNAPSHOT-Artefakte und 
+  der aktuellen SNAPSHOT-Site bestimmt.
+  
+  Der öffentliche Release-Build ist zum Veröffentlichen der Release-Artefakte bestimmt. 
+  Die Release-Site wird aktuell nicht veröffentlicht.
+  
+*** Veröffentlichen der SNAPSHOT-Artefakte
+
+  Über ein <clean deploy> können die SNAPSHOT-Artefakte veröffentlicht werden,
+  sofern der der Server <japrostSnapshotsId> in den settings konfiguriert ist.
+
+*** Veröffentlichen der SNAPSHOT-Site
+
+  Zum Veröffentlichen der SNAPSHOT-Site über ein <site-deploy> muss in den settings sowohl
+  der Server <japrostSiteId> als auch die <japrost.distribution.site.url> korrekt konfiguriert sein.
+  Für letzteres bietet es sich an ein Profil in den settings anzulegen.
+
+*** Veröffentlichen der Release-Artefakte
+
+  Zum veröffenlichen der Release-Artefakte muss das Release-Tag aus dem Release-Build ausgechecked werden
+  und darauf ein <clean deploy> ausgeführt werden. 
+  Dabei muss das Profil <signArtifacts> aktiv sein, um die Artefakte mit gpg zu signieren.
+  Die Server <japrostOpenPGP> und <japrostReleasesId> müssen in den settings konfiguriert sein.
+  Für Java-Projekte muss das Profil <javadocNsources> aus der java-parent-pom aktiviert sein,
+  um das JavaDoc und die Sourcen mit zu veröffentlichen.
+  
+* Profile 
+
+	Folgende Profile kommen bei den builds in Einsatz
+
++--+--+
+|| Name || Definition || Anmerkung ||
++--+--+
+| local | parent-pom | für lokale Entwicklung |
++--+--+
+| javadocNsources | java-parent-pom | für release builds |
++--+--+
+| signArtifacts | parent-pom | für release builds |
++--+--+
+
+	  
+** local
+
+   Dieses Profil setzt alle Einstellungen damit lokal builds nicht fehlschlagen.
+   
+** javadocNsources
+
+  Dieses Profils konfiguriert die Plugins <maven-javadoc-plugin> und <maven-source-plugin>.
+  Es wird manuell aktiviert und ist für public releases von <jar>-Projekten notwendig. 
+
+** signArtifacts
+ 
+  Dieses Profil konfiguriert das <maven-gpg-plugin> zum releasen der Artefakte.
+  Für release builds ist es automatisch aktiv.
+  
+* Checklist Release
+
+  Bauen und veröffentlichen der Release-Artefakte. 
+  Für "synchrone" Releases können die Schritte auch für die Projekthierarchie parallel ausgeführt werden
+  (also erst bei allen die changes anpassen, dann alle Release-Artefakte erstellen, ...).
+  Dies erlaubt es, sicherzustellen, dass keine Versionen "verbrannt" werden, 
+  da bis zu den Aktionen auf OSS alles zurückgedreht werden kann. 
+  
+  * changes (und ggfs. pom) anpassen und integrieren
+  
+  * Releases "internal": Erstellen der Release-Artefakte
+  
+  * Veröffentlichen "public": Veröffentlichen der Release-Artefakte nach OSS
+  
+  * auf OSS: close der Release-Artefakte
+  
+  * auf OSS: release der Release-Artefakte
+  
+  * auf maven-central: warten auf öffenliche Verfügbarkeit
+  
+  * "next SNAPSHOT" auschecken (lokal updaten)
+  
+  * push nach internal scm
+  
+  * push nach public scm
+  
+  * changes anpassen und integrieren
+  

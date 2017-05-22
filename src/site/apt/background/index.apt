@@ -15,5 +15,7 @@ Hintergründe
 *--+--+
  {{{./about.html}Über ...}} | Informationen zum Maven-Setup und Konfiguration |
 *--+--+
+ {{{./build.html}Build}} | Informationen wie die Projekte gebaut werden |
+*--+--+
  {{{./eclipse.html}Eclipse }} | Informationen zum Eclipse-Setup und Konfiguration |
 *--+--+

@@ -1,0 +1,31 @@
+ -----
+ Build
+ -----
+ alexxismachine
+ -----
+ 2017-05-22
+ -----
+ 
+Build
+ 
+  This page describes the build an publish of artefacts. 
+
+* Build-Stages
+
+  There are three stages for the build:  "local", "internal" and "public".
+  They are almost preconfigured in the parent-pom.
+  
+  "local" is used for development and is usable without configuration in the settings. 
+  "local" uses the local clone of the scm as repository.
+  
+  "internal" is used to build releases.
+  The according servers have to be configured in the settings..
+  "internal" uses an internal clone of the repository as scm.
+  
+  "public" is used to publish artefacts and sites.
+  The according servers have to be configured in the settings..
+  "public" uses the scm of the pom as repository.
+ 
+** Development "local"
+
+  To be continued ...
