@@ -10,10 +10,58 @@ Eclipse
 
   Diese Seite beschreibt, welche Eclipse-Plugins und Einstellungen verwendet werden.
   
-* Eclemma
+* Plugins
+  
+** Eclemma (marketplace)
 
   PlugIn zur Ermittlung der Code-Coverage. 
 
-* More Unit
+** More Unit (marketplace)
 
   PlugIn zur besseren JUnit Unterstützung.
+  
+** JAutodoc
+
+  PlugIn zum Generieren von JavaDoc.
+  
+* Key-Bindings
+
+  * Alt-G, C: Generate constructor using fields
+
+  * Alt-G, E: Generate equals and hash code
+  
+  * Alt-G, G: Generate getters and setters
+
+* Save Actions
+
+  * Format source code - all lines
+
+  * Organize Imports
+  
+** Additional Actions
+
+  * Code Organizing
+  
+    * Remove trailing whitespace - all lines
+	
+	* correct indentation
+	
+  * Code Style
+  
+    * Control statements -  Use blocks - always
+	
+	* Expression - Use parntheses always
+	
+	* Variable - Use final - always
+	
+  * Missing Code
+  
+    * all all missing annotations
+	
+  * Unnecessary code
+  
+    * remove unused imports
+	
+	* remove unnecessary casts
+	
+	* remove redundant type arguments
