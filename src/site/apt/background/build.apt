@@ -47,6 +47,7 @@ Build
   
   Hierfür muss über z.B. <-DstagingDirectory=/tmp/japrost/site/> die gemeinsame Ausgabe gewählt werden 
   und über <-DtopSiteURL=http://www.japrost.de/> das relativieren der Links einheitlich erstellt werden.
+  Die Properties können natürlich auch über ein Profil in den Settings gesteuert werden.
   
   Nicht zu vergessen, dass für die Site des Parent-Projekts über <-f site-pom.xml> die pom für die Site ausgewählt werden muss
   und ein Erstellen der "zu vererbenden" Site nicht notwendig ist.
@@ -95,22 +96,21 @@ Build
   
 * Profile 
 
-	Folgende Profile kommen bei den builds in Einsatz
+  Folgende Profile kommen bei den builds in Einsatz
 
-+--+--+
+*--+--+--+
 || Name || Definition || Anmerkung ||
-+--+--+
+*--+--+--+
 | local | parent-pom | für lokale Entwicklung |
-+--+--+
+*--+--+--+
 | javadocNsources | java-parent-pom | für release builds |
-+--+--+
+*--+--+--+
 | signArtifacts | parent-pom | für release builds |
-+--+--+
+*--+--+--+
 
-	  
 ** local
 
-   Dieses Profil setzt alle Einstellungen damit lokal builds nicht fehlschlagen.
+  Dieses Profil setzt alle Einstellungen damit lokal builds nicht fehlschlagen.
    
 ** javadocNsources
 
