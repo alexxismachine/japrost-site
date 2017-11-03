@@ -8,7 +8,10 @@
  
 Build
  
-  Diese Seite beschreibt den Build und das Ausbringen der Artefakte. 
+  Diese Seite beschreibt den Build und das Ausbringen der Artefakte.
+  
+  Um eine Konfiguration des Builds auf Projekt-Basis zu erlauben, hat jedes JaProSt Projekt unter <<<src>>> die Datei 
+  <<<japrost-project.txt>>> liegen. Damit lassen sich z.B. projektspezifische maven Profile aktivieren.
 
 * Build-Stages
 
@@ -82,7 +85,7 @@ Build
 *** Veröffentlichen der SNAPSHOT-Site
 
   Zum Veröffentlichen der SNAPSHOT-Site über ein <site-deploy> muss in den settings sowohl
-  der Server <japrostSiteId> als auch die <japrost.distribution.site.url> korrekt konfiguriert sein.
+  der Server <japrostSiteId> als auch das Property <japrost.distribution.site.url> korrekt konfiguriert sein.
   Für letzteres bietet es sich an ein Profil in den settings anzulegen.
 
 *** Veröffentlichen der Release-Artefakte
