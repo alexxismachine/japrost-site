@@ -46,7 +46,7 @@ Build
 *** Erstellen der SNAPSHOT-Site
 
   Zum Testen der zusammenhängenden Site aller Projekte empfiehlt es sich,
-  diese an eine gemeinsame Stelle zu "stagen" mit <site:site site:stage>.
+  diese an eine gemeinsame Stelle zu "stagen" mit <post-site site:stage>.
   
   Hierfür muss über z.B. <-DstagingDirectory=/tmp/japrost/site/> die gemeinsame Ausgabe gewählt werden 
   und über <-DtopSiteURL=http://www.japrost.de/> das relativieren der Links einheitlich erstellt werden.
