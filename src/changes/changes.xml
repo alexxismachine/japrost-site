@@ -4,6 +4,17 @@
   xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
   <body>
     <release
+      version="2.0.1"
+      description="configuration and build"
+      date="2017-11-04">
+      <action type="add">
+        Marker file for maven profile activation.
+      </action>
+      <action type="update">
+        Documentation of configuration and build.
+      </action>
+    </release>
+    <release
       version="2.0"
       description="less maven properties"
       date="2017-05-10">
