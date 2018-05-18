@@ -6,6 +6,11 @@
   name="JaProSt">
   
   <body>
+    <links>
+      <item
+        name="Datenschutz"
+        href="http://www.japrost.de/datenschutz.html" />
+    </links>
     <breadcrumbs>
       <item
         name="JaProSt"
