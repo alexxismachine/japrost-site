@@ -13,7 +13,4 @@ Java Projekte
   {{{./amaot-one/index.html}AMAOT one}}  AMAOT als eine Datei zum selber basteln.
   
   {{{./excerpt/index.html}Excerpt}} - ein Tool, mit dem man Textauszüge zu Poster-Bildern machen kann.
-  
-  {{{./widelands/index.html}Widelands Doc}} - ein Tool um aus den in Widelands vorhandenen Artefakten (conf-Dateien, Bilder, Übersetzungen)
-  eine Dokumentation von Widelands zu erzeugen.
-  
+    
