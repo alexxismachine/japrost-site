@@ -4,6 +4,17 @@
   xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
   <body>
     <release
+      version="2.0.2"
+      description="evolution"
+      date="TBD">
+      <action type="remove">
+        Retire widelandsdoc project.
+      </action>
+      <action type="add">
+        Add Datenschutzerklärung.
+      </action>
+    </release>
+    <release
       version="2.0.1"
       description="configuration and build"
       date="2017-11-04">

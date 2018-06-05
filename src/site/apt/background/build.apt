@@ -91,11 +91,11 @@ Build
 *** Veröffentlichen der Release-Artefakte
 
   Zum veröffenlichen der Release-Artefakte muss das Release-Tag aus dem Release-Build ausgechecked werden
-  und darauf ein <clean deploy> ausgeführt werden. 
+  und darauf ein <clean deploy> ausgeführt werden.  
   Dabei muss das Profil <signArtifacts> aktiv sein, um die Artefakte mit gpg zu signieren.
   Die Server <japrostOpenPGP> und <japrostReleasesId> müssen in den settings konfiguriert sein.
-  Für Java-Projekte muss das Profil <javadocNsources> aus der java-parent-pom aktiviert sein,
-  um das JavaDoc und die Sourcen mit zu veröffentlichen.
+  <<??? automatisch aus parent pom?>> Für Java-Projekte muss das Profil <javadocNsources> aus der java-parent-pom aktiviert sein,
+  um das JavaDoc und die Sourcen mit zu veröffentlichen. 
   
 * Profile 
 
