@@ -14,15 +14,19 @@ Eclipse
   
 ** Eclemma (marketplace)
 
-  PlugIn zur Ermittlung der Code-Coverage. 
+  Zur Ermittlung der Code-Coverage. 
 
 ** More Unit (marketplace)
 
-  PlugIn zur besseren JUnit Unterstützung.
+  Zur besseren JUnit Unterstützung.
   
 ** JAutodoc
 
-  PlugIn zum Generieren von JavaDoc.
+  Zum Generieren von JavaDoc.
+  
+** Checkstyle (marktetplace)
+
+  Zur statischen Codeanalyse.
   
 * Key-Bindings
 
@@ -43,25 +47,29 @@ Eclipse
   * Code Organizing
   
     * Remove trailing whitespace - all lines
-	
-	* correct indentation
-	
+
+      * correct indentation
+
   * Code Style
   
     * Control statements -  Use blocks - always
-	
-	* Expression - Use parntheses always
-	
-	* Variable - Use final - always
-	
+
+    * Expressions - Use parntheses always
+
+    * Variable declarations - Use final - always
+
   * Missing Code
-  
-    * all all missing annotations
-	
+
+    * Annotations - add missing annotations - all
+
   * Unnecessary code
-  
-    * remove unused imports
-	
-	* remove unnecessary casts
-	
-	* remove redundant type arguments
+
+    * Unused code
+
+      * remove unused imports
+
+    * Unnecessary code
+
+      * remove unnecessary casts
+
+      * remove redundant type arguments
