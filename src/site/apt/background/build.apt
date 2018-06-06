@@ -65,6 +65,8 @@ Build
 
   Releases werden zunächst nur intern ohne site und deploy durchgeführt: 
   <mvn -DpushChanges=false -DlocalCheckout=true -Dgoals=install clean release:prepare release:perform>
+  
+  Durch das <release:perform> wird das Profil <signArtifacts> automatisch aktiviert.
     
   Das veröffentlichen der Artefakte wird auf dem durch das release-plugin erstellten TAG durchgeführt (s.u.).
   Erst nach der Veröffentlichung werden die lokalen Änderungen durch das Release intern integriert.
@@ -94,6 +96,7 @@ Build
   und darauf ein <clean deploy> ausgeführt werden.  
   Dabei muss das Profil <signArtifacts> aktiv sein, um die Artefakte mit gpg zu signieren.
   Die Server <japrostOpenPGP> und <japrostReleasesId> müssen in den settings konfiguriert sein.
+  
   <<??? automatisch aus parent pom?>> Für Java-Projekte muss das Profil <javadocNsources> aus der java-parent-pom aktiviert sein,
   um das JavaDoc und die Sourcen mit zu veröffentlichen. 
   
@@ -123,7 +126,7 @@ Build
 ** signArtifacts
  
   Dieses Profil konfiguriert das <maven-gpg-plugin> zum releasen der Artefakte.
-  Für release builds ist es automatisch aktiv.
+  Für release builds ist es automatisch aktiv (da das <release:perform> das Property <performRelease> setzt).
   
 * Checklist Release
 
@@ -137,7 +140,7 @@ Build
   
   * Releases "internal": Erstellen der Release-Artefakte
   
-  * Veröffentlichen "public": Veröffentlichen der Release-Artefakte nach OSS
+  * Veröffentlichen "public" (auf Release Tag): Veröffentlichen der Release-Artefakte nach OSS
   
   * auf OSS: close der Release-Artefakte
   
@@ -150,8 +153,6 @@ Build
   * push nach internal scm
   
   * push nach public scm
-  
-  * changes anpassen und integrieren
   
   * site veröffentlichen
   
