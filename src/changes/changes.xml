@@ -8,6 +8,12 @@
       description="evolution"
       date="TBD">
       <action type="remove">
+        Move java project list ot java parent.
+      </action>
+      <action type="update">
+        New versions of java parent.
+      </action>
+      <action type="remove">
         Retire widelandsdoc project.
       </action>
       <action type="add">
