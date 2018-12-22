@@ -10,6 +10,10 @@ Versionen
 
   * parent 5.3-SN
  
+    * java-parent 11.0.1-SN
+    
+      * JaBudGet 0.0.2-SNAPSHOT
+      
   * <<parent 5.2>>
  
     * <<site 2.0.1>>
@@ -28,8 +32,6 @@ Versionen
     
     * <<java-parent 11.0.0>>
     
-    * java-parent 11.0.1-SN
-    
     * <<java-parent 2.0>>
     
       * <<amaot 2.1.0>>
@@ -47,8 +49,6 @@ Versionen
       * excerpt 0.0.3-SN
       
       * <<JaBudGet 0.0.1>>
-      
-      * JaBudGet 0.0.2-SNAPSHOT
       
       * <<StaProMa 0.0.4>>
       
