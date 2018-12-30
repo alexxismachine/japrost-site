@@ -137,6 +137,10 @@ Build
   da bis zu den Aktionen auf OSS alles zurückgedreht werden kann. 
   
   * changes (und ggfs. pom) anpassen und integrieren
+
+  * Lokal bauen
+
+  * Lokale Site bauen
   
   * Releases "internal": Erstellen der Release-Artefakte
   
