@@ -18,9 +18,13 @@ Versionen
 
       * <<JaBudGet 0.0.2>>
 
-    * java-parent 11.0.2-SN
+    * <<java-parent 11.0.2>>
 
-      * JaBudGet 0.0.3-SNAPSHOT
+      * JaBudGet 0.0.4-SNAPSHOT
+
+      * <<JaBudGet 0.0.3>>
+
+    * java-parent 11.0.3-SN
 
   * <<parent 5.2>>
  
