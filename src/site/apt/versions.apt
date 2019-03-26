@@ -14,6 +14,10 @@ Versionen
  
     * site 2.1.0-SN
 
+    * <<qa 1.1>>
+    
+    * qa 1.2-SN
+    
     * <<java-parent 11.0.1>>
 
       * <<JaBudGet 0.0.2>>
@@ -35,8 +39,6 @@ Versionen
     * skin 2-SN
     
     * <<qa 1.0>>
-    
-    * qa 1.1-SN
     
     * java-parent 8.0.1-SN
     
