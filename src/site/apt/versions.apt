@@ -10,6 +10,8 @@ Versionen
 
   * parent 5.4-SN
 
+     * java-parent 11.0.3-SN
+
   * <<parent 5.3>>
  
     * site 2.1.0-SN
@@ -28,8 +30,8 @@ Versionen
 
       * <<JaBudGet 0.0.3>>
 
-    * java-parent 11.0.3-SN
-
+      * StaProMa 0.0.6-SN
+      
   * <<parent 5.2>>
  
     * <<site 2.0.1>>
@@ -64,5 +66,5 @@ Versionen
       
       * <<StaProMa 0.0.4>>
       
-      * StaProMa 0.0.5-SN
- 
+      * <<StaProMa 0.0.5>>
+      
