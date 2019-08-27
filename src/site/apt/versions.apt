@@ -20,18 +20,20 @@ Versionen
     
     * qa 1.2-SN
     
-    * <<java-parent 11.0.1>>
-
-      * <<JaBudGet 0.0.2>>
-
     * <<java-parent 11.0.2>>
 
       * JaBudGet 0.0.4-SNAPSHOT
 
       * <<JaBudGet 0.0.3>>
 
-      * StaProMa 0.0.6-SN
+      * StaProMa 0.2.0-SN
+
+      * <<StaProMa 0.1.0>>
       
+    * <<java-parent 11.0.1>>
+
+      * <<JaBudGet 0.0.2>>
+
   * <<parent 5.2>>
  
     * <<site 2.0.1>>

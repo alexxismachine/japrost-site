@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
   <body>
     <release
-      version="2.0.2"
+      version="2.1.0"
       description="evolution"
       date="TBD">
       <action type="remove">

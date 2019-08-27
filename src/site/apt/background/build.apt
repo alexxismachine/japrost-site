@@ -138,25 +138,33 @@ Build
   
   * changes (und ggfs. pom) anpassen und integrieren
 
-  * Lokal bauen
+  * Ausführen "lokal build": Lokal alles bauen und installiern
 
-  * Lokale Site bauen
+  * Ausführen "local site": Lokal die Site bauen, installiern und prüfen
   
-  * Releases "internal": Erstellen der Release-Artefakte
+  * Ausführen "internal release": Erstellen der Release-Artefakte
   
-  * Veröffentlichen "public" (auf Release Tag): Veröffentlichen der Release-Artefakte nach OSS
+  * Veröffentlichen auf dem Release-Tag 
   
-  * auf OSS: close der Release-Artefakte
+    * Checkout "release tag": Auf die Release-Sourcen wechseln
+    
+    * Ausführen "public release": Bauen und deployen der Release-Artefakte nach OSS staging
   
-  * auf OSS: release der Release-Artefakte
+  * Veröffentlichen der Artefakte über OSS (staging repositories)
   
-  * auf maven-central: warten auf öffenliche Verfügbarkeit
+    * "Close" des Release repositories
   
-  * "next SNAPSHOT" auschecken (lokal updaten)
+    * "Release"  des Release repositories
   
-  * push nach internal scm
+  * auf maven-central: warten auf öffenliche Verfügbarkeit (ca 15 min.)
   
-  * push nach public scm
+  * Veröffentlichen der Code-Basis
   
-  * site veröffentlichen
+    * "master" (next SNAPSHOT) auschecken
+    
+    * Versionen korrigieren (TODO: find a way to get the right next version automatically) und (amend) committen
+  
+    * push nach allen scm
+  
+  * Veröffentlichen der Site
   
