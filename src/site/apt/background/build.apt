@@ -138,7 +138,7 @@ Build
   
   * changes (und ggfs. pom) anpassen und integrieren
 
-  * Ausführen "lokal build": Lokal alles bauen und installiern
+  * Ausführen "local build": Lokal alles bauen und installiern
 
   * Ausführen "local site": Lokal die Site bauen, installiern und prüfen
   
@@ -158,13 +158,17 @@ Build
   
   * auf maven-central: warten auf öffenliche Verfügbarkeit (ca 15 min.)
   
-  * Veröffentlichen der Code-Basis
+  * Veröffentlichen der Site (Release-Version)
+  
+    * Site vom Projekt
+    
+    * JaProSt-Site mit update der Versionen-Seite
+    
+* Veröffentlichen der Code-Basis
   
     * "master" (next SNAPSHOT) auschecken
     
     * Versionen korrigieren (TODO: find a way to get the right next version automatically) und (amend) committen
   
-    * push nach allen scm
-  
-  * Veröffentlichen der Site
+    * push nach allen scm (auch die tags!)
   
