@@ -14,6 +14,8 @@ Versionen
 
       * JaBudGet 0.2.0-SNAPSHOT
 
+      * StaProMa 0.3.0-SNAPSHOT
+
   * <<parent 5.3>>
  
     * site 2.1.0-SN
@@ -27,8 +29,6 @@ Versionen
       * <<JaBudGet 0.1.0>>
 
       * <<JaBudGet 0.0.3>>
-
-      * StaProMa 0.3.0-SN
 
       * <<StaProMa 0.2.0>>
       
